@@ -10,6 +10,7 @@ import { useColorModeStore } from './store/colorMode'
 import { useQuestionsStore } from './store/questions'
 import StartButton from './components/StartButton'
 import Title from './components/Title'
+import Game from './components/Game'
 
 function App(): JSX.Element {
   const colorMode = useColorModeStore((state) => state.colorMode)
@@ -33,13 +34,7 @@ function App(): JSX.Element {
         <Container maxWidth="sm">
           <Title />
           {questions.length === 0 && <StartButton />}
-          {questions.length > 0 && (
-            <ul>
-              {questions.map((q) => (
-                <li key={q.id}>{q.question}</li>
-              ))}
-            </ul>
-          )}
+          {questions.length > 0 && <Game />}
         </Container>
       </main>
     </ThemeProvider>
