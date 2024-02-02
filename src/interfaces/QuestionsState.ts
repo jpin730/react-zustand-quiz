@@ -6,4 +6,5 @@ export interface QuestionsState {
   fetchQuestions: (limit: number) => Promise<void>
   goNextQuestion: () => void
   goPreviousQuestion: () => void
+  selectAnswer: (questionId: number, answerIndex: number) => void
 }

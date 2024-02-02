@@ -3,6 +3,7 @@ import ArrowBackIosNew from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos'
 
 import { useQuestionsStore } from '../store/questions'
+import QuestionCard from './QuestionCard'
 
 function Game(): JSX.Element {
   const questions = useQuestionsStore((state) => state.questions)
@@ -13,6 +14,7 @@ function Game(): JSX.Element {
   )
 
   const questionInfo = questions[currentQuestion]
+
   return (
     <>
       <Stack
@@ -20,6 +22,7 @@ function Game(): JSX.Element {
         gap={2}
         alignItems="center"
         justifyContent="center"
+        marginY={2}
       >
         <IconButton
           onClick={goPreviousQuestion}
@@ -36,7 +39,7 @@ function Game(): JSX.Element {
         </IconButton>
       </Stack>
 
-      <p>{questionInfo.question}</p>
+      <QuestionCard info={questionInfo} />
     </>
   )
 }

@@ -31,5 +31,8 @@ export const useQuestionsStore = create<QuestionsState>((set, get) => {
         set({ currentQuestion: previousQuestion })
       }
     },
+    selectAnswer: (questionId: number, answerIndex: number) => {
+      console.log('questionId', questionId, 'answerIndex', answerIndex)
+    },
   }
 })
