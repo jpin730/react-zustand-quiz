@@ -1,5 +1,14 @@
+import { Container } from '@mui/material'
+import Title from './components/Title'
+
 function App(): JSX.Element {
-  return <h1>React Zustand Quiz</h1>
+  return (
+    <main>
+      <Container maxWidth="sm">
+        <Title />
+      </Container>
+    </main>
+  )
 }
 
 export default App
