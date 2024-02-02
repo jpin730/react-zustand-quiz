@@ -1,10 +1,10 @@
 import { create } from 'zustand'
 
-import { type State } from '../interfaces/State'
+import { type QuestionsState } from '../interfaces/QuestionsState'
 
 const API_URL = ''
 
-export const useQuestionsStore = create<State>((set) => {
+export const useQuestionsStore = create<QuestionsState>((set) => {
   return {
     questions: [],
     currentQuestion: 0,
