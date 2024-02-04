@@ -1,15 +1,10 @@
-import {
-  Container,
-  CssBaseline,
-  ThemeProvider,
-  createTheme,
-} from '@mui/material'
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
 import { useMemo } from 'react'
 
 import { useColorModeStore } from './store/colorMode'
 import { useQuestionsStore } from './store/questions'
 import StartButton from './components/StartButton'
-import Title from './components/Title'
+import Header from './components/Header'
 import Game from './components/Game'
 
 function App(): JSX.Element {
@@ -30,12 +25,10 @@ function App(): JSX.Element {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
+      <Header />
       <main>
-        <Container maxWidth="sm">
-          <Title />
-          {questions.length === 0 && <StartButton />}
-          {questions.length > 0 && <Game />}
-        </Container>
+        {questions.length === 0 && <StartButton />}
+        {questions.length > 0 && <Game />}
       </main>
     </ThemeProvider>
   )

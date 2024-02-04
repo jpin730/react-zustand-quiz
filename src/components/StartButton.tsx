@@ -12,11 +12,9 @@ const StartButton = (): JSX.Element => {
   }
 
   return (
-    <div style={{ marginTop: '16px' }}>
-      <Button onClick={handleClick} variant="contained">
-        Start quiz!
-      </Button>
-    </div>
+    <Button sx={{ margin: 'auto' }} onClick={handleClick} variant="contained">
+      Start quiz!
+    </Button>
   )
 }
 
