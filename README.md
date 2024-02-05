@@ -24,3 +24,11 @@ Run the app for development with the following command:
 ```bash
 npm run dev
 ```
+
+## Build
+
+To build the app for GH pages, run the following command:
+
+```bash
+npm run build
+```
