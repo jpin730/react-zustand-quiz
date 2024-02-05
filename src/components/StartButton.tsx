@@ -7,7 +7,7 @@ const LIMIT_QUESTIONS = 10
 const StartButton = (): JSX.Element => {
   const fetchQuestions = useQuestionsStore((state) => state.fetchQuestions)
 
-  const handleClick = (): void => {
+  const startQuiz = (): void => {
     void fetchQuestions(LIMIT_QUESTIONS)
   }
 
@@ -16,7 +16,7 @@ const StartButton = (): JSX.Element => {
       size="large"
       variant="contained"
       sx={{ margin: 'auto' }}
-      onClick={handleClick}
+      onClick={startQuiz}
     >
       Start quiz!
     </Button>

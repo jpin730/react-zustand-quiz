@@ -19,13 +19,18 @@ function GameNavigation(): JSX.Element {
       justifyContent="center"
       paddingY={2}
     >
-      <IconButton onClick={goPreviousQuestion} disabled={currentQuestion === 0}>
+      <IconButton
+        onClick={goPreviousQuestion}
+        disabled={currentQuestion === 0}
+        size="large"
+      >
         <ArrowBackIosNew />
       </IconButton>
       {currentQuestion + 1} / {questions.length}
       <IconButton
         onClick={goNextQuestion}
         disabled={currentQuestion >= questions.length - 1}
+        size="large"
       >
         <ArrowForwardIos />
       </IconButton>

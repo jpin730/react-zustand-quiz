@@ -12,7 +12,7 @@ function ResetButton(): JSX.Element {
   }
 
   return (
-    <IconButton onClick={reset} color="inherit">
+    <IconButton onClick={reset} color="inherit" size="large">
       <RestartAltIcon />
     </IconButton>
   )
