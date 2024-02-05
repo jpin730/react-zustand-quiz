@@ -12,27 +12,17 @@ function ThemeButton(): JSX.Element {
   const setColorMode = useColorModeStore((state) => state.setColorMode)
 
   useEffect(() => {
-    const storedColorMode = localStorage.getItem('colorMode')
-
-    if (
-      storedColorMode != null &&
-      (storedColorMode === 'dark' || storedColorMode === 'light')
-    ) {
-      setColorMode(storedColorMode)
-      return
+    if (colorMode == null) {
+      setColorMode(prefersDarkMode ? 'dark' : 'light')
     }
+  }, [colorMode, prefersDarkMode, setColorMode])
 
-    setColorMode(prefersDarkMode ? 'dark' : 'light')
-  }, [prefersDarkMode, setColorMode])
-
-  const handleClick = (): void => {
-    const selectedColorMode = colorMode === 'dark' ? 'light' : 'dark'
-    setColorMode(selectedColorMode)
-    localStorage.setItem('colorMode', selectedColorMode)
+  const toggleTheme = (): void => {
+    setColorMode(colorMode === 'dark' ? 'light' : 'dark')
   }
 
   return (
-    <IconButton onClick={handleClick} color="inherit">
+    <IconButton onClick={toggleTheme} color="inherit" size="large">
       {theme.palette.mode === 'dark' ? (
         <Brightness7Icon />
       ) : (
