@@ -31,8 +31,20 @@ export const useQuestionsStore = create<QuestionsState>((set, get) => {
         set({ currentQuestion: previousQuestion })
       }
     },
-    selectAnswer: (questionId: number, answerIndex: number) => {
-      console.log('questionId', questionId, 'answerIndex', answerIndex)
+    selectAnswer: (questionId: number, selectedAnswer: number) => {
+      const { questions } = get()
+      const newQuestions = structuredClone(questions)
+      const questionIndex = newQuestions.findIndex((q) => q.id === questionId)
+      const questionInfo = newQuestions[questionIndex]
+      const isCorrectAnswer = questionInfo.correctAnswer === selectedAnswer
+
+      newQuestions[questionIndex] = {
+        ...questionInfo,
+        selectedAnswer,
+        isCorrectAnswer,
+      }
+
+      set({ questions: newQuestions })
     },
   }
 })
