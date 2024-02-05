@@ -11,10 +11,11 @@ import {
 
 import { JavaScriptLogo } from './JavaScriptLogo'
 import ThemeButton from './ThemeButton'
+import ResetButton from './ResetButton'
 
 function Header(): JSX.Element {
   const theme = useTheme()
-  const medium = useMediaQuery(theme.breakpoints.up('md'))
+  const small = useMediaQuery(theme.breakpoints.up('sm'))
 
   return (
     <AppBar position="sticky">
@@ -27,12 +28,15 @@ function Header(): JSX.Element {
             justifyContent="center"
           >
             <JavaScriptLogo />
-            <Typography variant={medium ? 'h4' : 'h5'} component="h1">
-              JavaScript Quiz
+            <Typography variant={small ? 'h4' : 'h5'} component="h1">
+              {small ? 'JavaScript' : 'JS'} Quiz
             </Typography>
           </Stack>
           <Box flexGrow={1} />
-          <ThemeButton />
+          <Stack direction="row">
+            <ResetButton />
+            <ThemeButton />
+          </Stack>
         </Toolbar>
       </Container>
     </AppBar>

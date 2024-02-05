@@ -7,4 +7,5 @@ export interface QuestionsState {
   goNextQuestion: () => void
   goPreviousQuestion: () => void
   selectAnswer: (questionId: number, answerIndex: number) => void
+  reset: () => void
 }

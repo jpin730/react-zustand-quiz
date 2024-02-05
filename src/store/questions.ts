@@ -46,5 +46,8 @@ export const useQuestionsStore = create<QuestionsState>((set, get) => {
 
       set({ questions: newQuestions })
     },
+    reset: () => {
+      set({ questions: [], currentQuestion: 0 })
+    },
   }
 })
