@@ -15869,7 +15869,7 @@ Error generating stack: ` +
     JP = ZP
   var ek = {
     BASE_URL: '/react-zustand-quiz/',
-    MODE: 'prod',
+    MODE: 'production',
     DEV: !1,
     PROD: !0,
     SSR: !1,
@@ -15895,7 +15895,7 @@ Error generating stack: ` +
           getInitialState: () => c,
           subscribe: (u) => (r.add(u), () => r.delete(u)),
           destroy: () => {
-            ;(ek ? 'prod' : void 0) !== 'production' &&
+            ;(ek ? 'production' : void 0) !== 'production' &&
               console.warn(
                 '[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected.',
               ),
@@ -16050,7 +16050,7 @@ Error generating stack: ` +
   const Tk = xm(hk)
   var SO = {
     BASE_URL: '/react-zustand-quiz/',
-    MODE: 'prod',
+    MODE: 'production',
     DEV: !1,
     PROD: !0,
     SSR: !1,
@@ -16060,7 +16060,7 @@ Error generating stack: ` +
   let BS = !1
   const Ck = (e) => e
   function Rk(e, t = Ck, r) {
-    ;(SO ? 'prod' : void 0) !== 'production' &&
+    ;(SO ? 'production' : void 0) !== 'production' &&
       r &&
       !BS &&
       (console.warn(
@@ -16077,7 +16077,7 @@ Error generating stack: ` +
     return vk(n), n
   }
   const FS = (e) => {
-      ;(SO ? 'prod' : void 0) !== 'production' &&
+      ;(SO ? 'production' : void 0) !== 'production' &&
         typeof e != 'function' &&
         console.warn(
           "[DEPRECATED] Passing a vanilla store will be unsupported in a future version. Instead use `import { useStore } from 'zustand'`.",
@@ -16089,7 +16089,7 @@ Error generating stack: ` +
     bO = (e) => (e ? FS(e) : FS)
   var ni = {
     BASE_URL: '/react-zustand-quiz/',
-    MODE: 'prod',
+    MODE: 'production',
     DEV: !1,
     PROD: !0,
     SSR: !1,
@@ -16117,12 +16117,12 @@ Error generating stack: ` +
         let c
         try {
           c =
-            (a ?? (ni ? 'prod' : void 0) !== 'production') &&
+            (a ?? (ni ? 'production' : void 0) !== 'production') &&
             window.__REDUX_DEVTOOLS_EXTENSION__
         } catch {}
         if (!c)
           return (
-            (ni ? 'prod' : void 0) !== 'production' &&
+            (ni ? 'production' : void 0) !== 'production' &&
               a &&
               console.warn(
                 '[zustand devtools middleware] Please install/enable Redux devtools extension',
@@ -16172,7 +16172,7 @@ Error generating stack: ` +
           let f = !1
           const b = o.dispatch
           o.dispatch = (...p) => {
-            ;(ni ? 'prod' : void 0) !== 'production' &&
+            ;(ni ? 'production' : void 0) !== 'production' &&
               p[0].type === '__setState' &&
               !f &&
               (console.warn(
@@ -16544,7 +16544,7 @@ Error generating stack: ` +
     },
     Lk = (e, t) =>
       'getStorage' in t || 'serialize' in t || 'deserialize' in t
-        ? ((ni ? 'prod' : void 0) !== 'production' &&
+        ? ((ni ? 'production' : void 0) !== 'production' &&
             console.warn(
               '[DEPRECATED] `getStorage`, `serialize` and `deserialize` options are deprecated. Use `storage` option instead.',
             ),
@@ -16563,7 +16563,7 @@ Error generating stack: ` +
     )
   var TO = {
     BASE_URL: '/react-zustand-quiz/',
-    MODE: 'prod',
+    MODE: 'production',
     DEV: !1,
     PROD: !0,
     SSR: !1,
