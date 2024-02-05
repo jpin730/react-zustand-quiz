@@ -1,7 +1,7 @@
 import { type Question } from '../interfaces/Question'
 
-const API_URL = ''
-const LIMIT_QUESTIONS = 10
+const API_URL = import.meta.env.API_URL
+const LIMIT_QUESTIONS = import.meta.env.LIMIT_QUESTIONS
 
 export const getQuestions = async (): Promise<Question[]> => {
   const res = await fetch(`${API_URL}/data.json`)
