@@ -1,6 +1,6 @@
 import { type Question } from '../interfaces/Question'
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 const LIMIT_QUESTIONS = import.meta.env.VITE_LIMIT_QUESTIONS
 
 export const getQuestions = async (): Promise<Question[]> => {
