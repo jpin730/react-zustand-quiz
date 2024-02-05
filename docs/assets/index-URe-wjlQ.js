@@ -16568,8 +16568,8 @@ Error generating stack: ` +
     PROD: !0,
     SSR: !1,
   }
-  const wk = TO.VITE_API_URL ?? '',
-    xk = TO.VITE_LIMIT_QUESTIONS,
+  const wk = TO.API_URL ?? '',
+    xk = TO.LIMIT_QUESTIONS,
     Pk = async () =>
       (await (await fetch(`${wk}/data.json`)).json())
         .sort(() => Math.random() - 0.5)
