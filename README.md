@@ -32,7 +32,3 @@ To build the app for GH pages, run the following command:
 ```bash
 npm run build
 ```
-
-## Deploy
-
-<https://jpin730.github.io/react-zustand-quiz/>
